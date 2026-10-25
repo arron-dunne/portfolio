@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 @layer base {
-  h1 { @apply text-4xl font-bold tracking-tight; }
+  h1 { @apply text-7xl font-thin tracking-wide; }
   h3 { @apply text-xl; }
   /* h2 { @apply text-2xl font-semibold; } */
   /* p  { @apply leading-relaxed; } */
+}
+
+@font-face {
+  font-family: "IBM_BIOS";
+  src: url("./fonts/imb-bios.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-ibm: "IBM_BIOS", sans-serif;
 }
