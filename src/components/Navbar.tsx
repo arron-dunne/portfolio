@@ -1,6 +1,8 @@
 function Navbar() {
   return <div className="w-full p-4 bg-white flex justify-between">
-    <h4>Portfolio</h4>
+    <a href="/">
+      <h4>Portfolio</h4>
+    </a>
     <div className="flex gap-6">
       <h4>Experience</h4>
       <h4>Projects</h4>
