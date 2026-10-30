@@ -1,23 +1,94 @@
+import Skill from "./Skill";
+
 function Papsnap() {
   return (
-    <div className="p-8">
+    <div className="max-w-7xl mx-auto p-8 space-y-12">
       <div className="flex justify-between items-center">
         <div className="flex gap-4 items-center">
           <img
             src={`${import.meta.env.BASE_URL}/papsnap-logo.png`}
             alt="Papsnap logo"
-            className="h-20"
+            className="h-16"
           />
-          <h1 className="text-5xl font-bold">PapSnap</h1>
+          <h1 className="text-4xl font-bold">PapSnap</h1>
         </div>
-
-        <a href="https://papsnap.com" className="bg-slate-300 rounded-full px-8 py-4 text-xl">
-          Visit Site
+        <a
+          href="https://papsnap.com"
+          target="none"
+          className="bg-linear-to-r from-blue-600 to-purple-600 rounded-full px-6 py-3 text-xl text-white font-medium"
+        >
+          Visit Site ›
         </a>
       </div>
 
-      <div>
-        Role: Full Stack Developer
+      <div className="flex justify-between">
+        <div className="mt-4">
+          <p className="text-2xl font-bold">Full Stack Developer</p>
+          <p className="italic">May 2026 - Ongoing</p>
+
+          <div className="mt-12 space-y-6">
+            
+            {/* Frontend */}
+            <div className="flex items-center">
+              <p className="w-28">Frontend</p>
+              <div className="flex gap-8">
+                <Skill name="React" image="react-logo.png" />
+                <Skill name="Vite" image="vite-logo.png" />
+                <Skill name="JavaScript" image="javascript-logo.png" />
+              </div>
+            </div>
+            
+            {/* Backend */}
+            <div className="flex items-center">
+              <p className="w-28">Backend</p>
+              <div className="flex gap-8">
+                <Skill name="Go" image="go-logo.png" />
+              </div>
+            </div>
+
+            {/* Data */}
+            <div className="flex items-center">
+              <p className="w-28">Data</p>
+              <div className="flex gap-8">
+                <Skill name="Postgres" image="postgres-logo.png" />
+              </div>
+            </div>
+
+            {/* Deployment */}
+            <div className="flex items-center">
+              <p className="w-28">Deployment</p>
+              <div className="flex gap-8">
+                <Skill name="Terraform" image="terraform-logo.png" />
+                <Skill name="AWS" image="aws-logo.png" />
+              </div>
+            </div>
+
+            {/* Version Control */}
+            <div className="flex items-center">
+              <p className="w-32">Version Control</p>
+              <div className="flex gap-8">
+                <Skill name="Git" image="git-logo.png" />
+                <div className="size-2 bg-slate-200 rounded-full"/>
+                <Skill name="Github" image="github-logo.png" />
+              </div>
+            </div>
+            
+            {/* AI */}
+            <div className="flex items-center">
+              <p className="w-28">AI</p>
+              <div className="flex gap-8">
+                <Skill name="Claude" image="claude-logo.png" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div className="w-1/2 p-0.5 rounded-4xl bg-linear-to-br from-blue-600 to-purple-600">
+          <img
+            src={`${import.meta.env.BASE_URL}/papsnap-screenshot.png`}
+            className="rounded-4xl"
+          />
+        </div>
       </div>
 
       <div className="mt-8 flex flex-col sm:flex-row gap-4">

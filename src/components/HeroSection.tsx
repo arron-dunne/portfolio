@@ -12,15 +12,15 @@ function HeroSection() {
       </div>
       <div className="flex gap-24">
         <div className="flex gap-4 items-center">
-          <img className="size-8" src="github-icon.png" />
+          <img className="size-8" src={`${import.meta.env.BASE_URL}/github-icon.png`} />
           <span>Github</span>
         </div>
         <div className="flex gap-4 items-center">
-          <img className="size-8" src="linkedin-icon.png" />
+          <img className="size-8" src={`${import.meta.env.BASE_URL}/linkedin-icon.png`} />
           <span>LinkedIn</span>
         </div>
         <div className="flex gap-4 items-center">
-          <img className="size-8" src="cv-icon.png" />
+          <img className="size-8" src={`${import.meta.env.BASE_URL}/cv-icon.png`} />
           <span>CV</span>
         </div>
       </div>

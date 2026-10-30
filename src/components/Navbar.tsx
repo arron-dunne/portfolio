@@ -1,11 +1,15 @@
+import { Link } from "react-router";
+
 function Navbar() {
   return <div className="w-full p-4 bg-white flex justify-between">
-    <a href="/">
-      <h4>Portfolio</h4>
-    </a>
+    <Link to="/">
+      <h4>Portfolio</h4>  
+    </Link>
     <div className="flex gap-6">
       <h4>Experience</h4>
-      <h4>Projects</h4>
+      <Link to="/projects/papsnap">
+        <h4>Projects</h4>
+      </Link>
       <h4>Skills</h4>
       <h4>Get in touch</h4>
     </div>
