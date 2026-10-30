@@ -72,6 +72,11 @@ function Cibolibro() {
             </button>
           </div>
 
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#6d6961] sm:text-lg">
+            A personal cookbook to collect recipes from the web, keep them
+            organised, and cook without distractions.
+          </p>
+
           <dl className="mt-8 grid gap-6 sm:mt-9 sm:grid-cols-[1.2fr_1fr] sm:gap-10 lg:max-w-xl">
             <div>
               <dt className="text-[11px] font-medium tracking-[0.16em] text-[#79766e] uppercase">
@@ -109,12 +114,12 @@ function Cibolibro() {
                 Project Overview
               </h2>
               <p className="max-w-prose text-base leading-8 text-[#6d6961] sm:text-[17px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur.
+                CiboLibro brings scattered recipes into one personal cookbook.
+                Home cooks can import recipes from hundreds of websites, add
+                their own, and organise everything with custom tags and notes.
+                Search makes saved recipes easy to find, while a step-by-step
+                cook mode keeps the focus on preparing the meal. The product is
+                live, free to use, and ad-free, with more features planned.
               </p>
             </section>
 
@@ -129,12 +134,13 @@ function Cibolibro() {
                 My Role
               </h2>
               <p className="max-w-prose text-base leading-8 text-[#6d6961] sm:text-[17px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                posuere erat a ante venenatis dapibus posuere velit aliquet. Donec
-                ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam.
-                Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras
-                mattis consectetur purus sit amet fermentum, maecenas faucibus
-                mollis interdum.
+                As CiboLibro’s sole developer and engineer, I own the technical
+                delivery end to end: the user interface, backend, database, and
+                cloud infrastructure. I took the application through development
+                and into production, connecting the recipe collection and cooking
+                experience with the systems behind it. I continue to develop and
+                maintain the live product, balancing new features with the
+                ongoing work of running it.
               </p>
             </section>
 
@@ -175,6 +181,81 @@ function Cibolibro() {
                   </div>
                 ))}
               </div>
+            </section>
+
+            <section
+              aria-labelledby="cibolibro-engineering"
+              className="mt-8 space-y-5 border-t border-[#dedbd3] pt-8"
+            >
+              <h2
+                id="cibolibro-engineering"
+                className="text-lg font-medium tracking-tight"
+              >
+                Engineering Highlight
+              </h2>
+
+              <p className="border-l-2 border-[#b35d42] pl-3 text-xs leading-5 text-[#79766e]">
+                Illustrative draft — the approach below is a proposed case study,
+                not a verified description of the production implementation.
+              </p>
+
+              <h3 className="text-xl font-medium leading-7 tracking-tight">
+                From a messy web page to a recipe worth keeping.
+              </h3>
+
+              <dl className="space-y-5 text-sm leading-7 text-[#6d6961]">
+                <div>
+                  <dt className="font-medium text-[#292823]">The challenge</dt>
+                  <dd>
+                    Recipe websites present ingredients, quantities, and steps in
+                    different ways. An import flow needs to turn that variation
+                    into a consistent recipe without silently losing important
+                    information.
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-[#292823]">
+                    A possible approach
+                  </dt>
+                  <dd>
+                    Separate extraction from normalisation and validation. When
+                    required fields are missing, return an editable draft for
+                    review rather than treating an incomplete import as a
+                    finished recipe.
+                  </dd>
+                </div>
+              </dl>
+
+              <figure className="min-w-0 overflow-hidden rounded-xl border border-[#383730] bg-[#292823] text-[#eeece6]">
+                <figcaption className="flex flex-wrap justify-between gap-x-4 gap-y-1 border-b border-white/10 px-4 py-3 text-[11px] leading-5 text-[#c5c0b5]">
+                  <span>Recipe import flow</span>
+                  <span>Illustrative pseudocode</span>
+                </figcaption>
+                <pre
+                  tabIndex={0}
+                  aria-label="Illustrative recipe import pseudocode"
+                  className="overflow-x-auto p-4 text-xs leading-6 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#d99a80] sm:p-5"
+                >
+                  <code>{`page = fetchPublicPage(url)
+recipe = extractRecipe(page)
+draft = normaliseRecipe(recipe)
+
+if missingRequiredFields(draft):
+    return requestUserReview(draft)
+
+return saveRecipe(draft)`}</code>
+                </pre>
+              </figure>
+
+              <p className="text-sm leading-7 text-[#6d6961]">
+                <span className="font-medium text-[#292823]">
+                  The intended benefit:
+                </span>{" "}
+                a more trustworthy import experience, with a clear recovery path
+                when a source page cannot be read completely. The final case
+                study will pair the actual implementation with evidence of its
+                behaviour on real recipes.
+              </p>
             </section>
           </div>
 
