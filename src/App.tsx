@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
 import Papsnap from "./components/projects/Papsnap";
+import Cibolibro from "./components/projects/Cibolibro";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         
         <Route path="projects">
           <Route path="papsnap" element={<Papsnap />} />
+          <Route path="cibolibro" element={<Cibolibro />} />
         </Route>
       </Routes>
       <Footer />
