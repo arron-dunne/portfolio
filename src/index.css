@@ -3,8 +3,10 @@
 @layer base {
   h1 { @apply text-7xl font-thin tracking-wide; }
   h3 { @apply text-xl; }
+  hr { @apply border border-slate-200}
   /* h2 { @apply text-2xl font-semibold; } */
   /* p  { @apply leading-relaxed; } */
+
 }
 
 @font-face {
