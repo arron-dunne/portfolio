@@ -39,11 +39,11 @@ function Project({
 
       <div className="mt-4 flex gap-16">
         <div>
-          <h6 className="text-sm font-medium uppercase text-gray-500">Role</h6>
+          <h5>Role</h5>
           <p className="mt-2 text-lg">{role}</p>
         </div>
         <div>
-          <h6 className="text-sm font-medium uppercase text-gray-500">Dates</h6>
+          <h5>Dates</h5>
           <p className="mt-2 text-lg">{dates}</p>
         </div>
       </div>
@@ -66,7 +66,7 @@ function Project({
 
       <div className="mt-8 flex flex-col sm:flex-row gap-4">
         <h3 className="min-w-xs">Skills</h3>
-        <div className="space-y-6">{skills}</div>
+        <div className="space-y-4">{skills}</div>
       </div>
 
       {gallery && (

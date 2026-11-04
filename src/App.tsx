@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
 import Papsnap from "./components/projects/Papsnap";
 import Cibolibro from "./components/projects/Cibolibro";
+import Career from "./components/career/Career";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
+
+        <Route path="career" element={<Career />} />
         
         <Route path="projects">
           <Route path="papsnap" element={<Papsnap />} />

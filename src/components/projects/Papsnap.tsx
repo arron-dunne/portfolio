@@ -72,53 +72,66 @@ function Papsnap() {
         <>
           {/* Frontend */}
           <div className="flex items-center">
-            <p className="w-28">Frontend</p>
-            <div className="flex gap-8">
+            <h6 className="w-40">Frontend</h6>
+            <div className="flex items-center gap-6">
               <Skill name="React" image="react-logo.png" />
+              <div className="size-2 bg-slate-200 rounded-full" />
               <Skill name="Vite" image="vite-logo.png" />
+              <div className="size-2 bg-slate-200 rounded-full" />
               <Skill name="JavaScript" image="javascript-logo.png" />
             </div>
           </div>
 
+          <div className="h-1 border-t border-slate-200"/>
+
           {/* Backend */}
           <div className="flex items-center">
-            <p className="w-28">Backend</p>
-            <div className="flex gap-8">
+            <h6 className="w-40">Backend</h6>
+            <div className="flex items-center gap-6">
               <Skill name="Go" image="go-logo.png" />
             </div>
           </div>
+          
+          <div className="h-1 border-t border-slate-200"/>
 
           {/* Data */}
           <div className="flex items-center">
-            <p className="w-28">Data</p>
-            <div className="flex gap-8">
+            <h6 className="w-40">Data</h6>
+            <div className="flex items-center gap-6">
               <Skill name="Postgres" image="postgres-logo.png" />
             </div>
           </div>
+          
+          <div className="h-1 border-t border-slate-200"/>
 
           {/* Deployment */}
           <div className="flex items-center">
-            <p className="w-28">Deployment</p>
-            <div className="flex gap-8">
+            <h6 className="w-40">Deployment</h6>
+            <div className="flex items-center gap-6">
               <Skill name="Terraform" image="terraform-logo.png" />
+              <div className="size-2 bg-slate-200 rounded-full" />
               <Skill name="AWS" image="aws-logo.png" />
             </div>
           </div>
+          
+          <div className="h-1 border-t border-slate-100"/>
 
           {/* Version Control */}
           <div className="flex items-center">
-            <p className="w-32">Version Control</p>
-            <div className="flex items-center gap-4">
+            <h6 className="w-40">Version Control</h6>
+            <div className="flex items-center gap-6">
               <Skill name="Git" image="git-logo.png" />
               <div className="size-2 bg-slate-200 rounded-full" />
               <Skill name="Github" image="github-logo.png" />
             </div>
           </div>
+          
+          <div className="h-1 border-t border-slate-200"/>
 
           {/* AI */}
           <div className="flex items-center">
-            <p className="w-28">AI</p>
-            <div className="flex gap-8">
+            <h6 className="w-40">AI</h6>
+            <div className="flex items-center gap-6">
               <Skill name="Claude" image="claude-logo.png" />
             </div>
           </div>
